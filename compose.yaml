@@ -1,0 +1,29 @@
+services:
+  app:
+    build: .
+    container_name: protospace-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/protospace_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+    restart: always
+
+  db:
+    image: postgres:15
+    container_name: protospace-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: protospace_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  db-data:
