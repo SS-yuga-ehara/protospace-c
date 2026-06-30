@@ -5,12 +5,12 @@ import lombok.Data;
 
 @Data
 public class ProtoTypeEntity {
-    private Long id;
-    private String name;
-    private String image;
-    private String catchcopy;
-    private String concept;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
-    private String userName;
+  private Long id;
+  private String name;
+  private String image;
+  private String catchcopy;
+  private String concept;
+  private LocalDateTime createdAt;
+  private LocalDateTime updatedAt;
+  private String userName;
 }
