@@ -70,67 +70,6 @@ text-decoration: none;
 margin-left: 20px;
 }
 
-/* メイン画面 */
-.main{
-  height: calc(100vh - 100px - 50px);
-  width: 100vw;
-  background-color: #ffffff;
-  padding: 50px;
-}
-
-.greeting{
-color: black;
-margin-bottom: 50px;
-}
-
-.greeting a{
-color: inherit;
-}
-
-/* プロトタイプ詳細ページ */
-.show-prototype{
-  display: flex;
-}
-
-.prototype{
-position: relative;
-}
-
-.card-img{
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-
-}
-
-.prototype-text a{
- 
-}
-
-.card-name a{
-  font: bold;
-  font-size: 20px;
-  color: black;
-  text-decoration: none;
-}
-
-.card-summary{
-  font-size: 16px;
-}
-
-.card-username a{
-  color: darkgray;
-  font-size: 14px;
-
-}
-
-.card-username{
-  position: absolute;
-  margin-top: auto;
-  text-align: right;
-}
-
-
 /* フッター */
 .footer{
   height: 30px;

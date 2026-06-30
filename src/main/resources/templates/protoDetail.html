@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>>
 <head>
   <meta charset="UTF-8">
   <title>Proto Space</title>
@@ -11,22 +11,26 @@
   <!-- ヘッダー仮置き -->
   <header class="header" th:insert="~{header :: header}"></header>
 
-
-  <!--  プロトタイプ表示 -->
+<!--  プロトタイプ詳細 上-->
    <div class="main">
+    <div class="proto-detail-name">
+      <div class="proto-detail-username">
+        <div class="proto-detail-btn">
+          <a class="proto_btn" href="#">編集する</a>
+          <a class="proto_btn" data-method="delete" href="#">削除する</a>
+        </div>
 
-    <div th:if="${#authorization.expression('isAuthenticated()')}">
-    <div class="greeting">こんにちは、<a th:href="@{ユーザー詳細画面}" th:text="${#authentication.name}">名前さん</a> </div>
-    </div>
-    
-        <div class="show-prototype">
-      <div th:each="proto : ${prototypes}" class="prototype">
-
-      <!--  画像表示  -->
-
-        <div class="card-img" th:if="${proto.image}">
+ <!-- プロトタイプ画像 -->
+       <div class="card-img">
          <img th:src="${proto.image}" alt="画像の説明">
         </div>
+
+<!--  プロトタイプ詳細　下-->
+<div class="proto-body">
+
+</div>
+      </div>
+    </div>
    
      <!--  プロトタイプ概要  -->
         <div class="card-body">
@@ -43,10 +47,9 @@
         </div>
       </div>
     </div>
-  </div>
 
-<!-- フッター - -->
- 
+
+    <!-- フッター - -->
   <div class="footer" th:insert="~{footer :: footer}" ></div>
   
-</body> 
+</body>
