@@ -1,0 +1,75 @@
+ <!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Proto Space</title>
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+   <link rel="stylesheet" href="../static/css/akira.css">
+</head>
+
+<body>
+  <!-- ヘッダー仮置き -->
+  <header class="header">
+     <div class="header__bar">
+
+      <div class="header-left">
+    <p class="sub-title">SHARE THE PROTOTYPE</p>
+    <h1 class="title">PROTO SPACE</h1>
+  </div>
+ 
+   <!-- クラス名のleft-right逆にしてます -->
+    <div class="header-right">
+     <form action="/logout" method="post" class="btn">
+       <button type="submit">ログアウト</button>
+     </form>
+ 
+        <a href="#" class="New-Proto">New Proto</a>
+      </div>
+ 
+      <!-- <div th:if="${#authorization.expression('!isAuthenticated()')}"> -->
+        <!-- ログインと新規登録のクラス作成しています -->
+        <!-- <a href="#" class="login-link">ログイン</a>
+ 
+        <a href="#" class="signup-link">新規登録</a> -->
+      </div>
+    </div>
+   </div>
+</header>
+
+
+  <!--  プロトタイプ表示 -->
+   <div class="main">
+
+    <!-- <div th:if="${#authorization.expression('isAuthenticated()')}"> -->
+    <div class="greeting">こんにちは、<a href="#">名前さん</a> </div>
+    <!-- </div> -->
+    
+    <div class="show-prototype">
+        <div class="prototype">
+
+      <!--  画像表示  -->
+
+        <div class="card-img">
+         <img src="#" alt="画像の説明">
+        </div>
+
+     <!--  プロトタイプ概要  -->
+        <div class="card-body">
+          <div class="card-name">
+           <a href="#">プロトタイプ名</a>
+          </div>
+
+         <div class="card-summary">キャッチコピー</div>
+
+         <div class="card-username">
+          <a href="#"> by名前</a>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- フッター - -->
+ 
+  <div class="footer">別記</div>
+  
+</body> 
