@@ -1,0 +1,11 @@
+CREATE TABLE prototypes (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    image VARCHAR(255) NOT NULL,
+    catchcopy TEXT NOT NULL,
+    concept TEXT NOT NULL,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
