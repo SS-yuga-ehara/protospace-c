@@ -3,20 +3,20 @@
   <meta charset="UTF-8">
   <title>Proto Space</title>
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-   <link rel="stylesheet" th:href="@{../static/css/akira.css}">
-   <link rel="stylesheet" th:href="@{../static/css/header.css}">
+   <link rel="stylesheet" th:href="@{akira.css}">
+   <link rel="stylesheet" th:href="@{header.css}">
 </head>
 
 <body>
-  <!-- ヘッダー仮置き -->
-  <header class="header" th:insert="~{header :: header}"></header>
+  <!-- ヘッダー -->
+  <header class="header" th:replace="~{header :: header}"></header>
 
 
   <!--  プロトタイプ表示 -->
    <div class="main">
 
     <div th:if="${#authorization.expression('isAuthenticated()')}">
-    <div class="greeting">こんにちは、<a th:href="@{ユーザー詳細画面}" th:text="${#authentication.name}">名前さん</a> </div>
+    <div class="greeting">こんにちは、<a th:href="@{ユーザー詳細画面}" th:text="${#authentication.name} + 'さん'"></a></div>
     </div>
     
         <div class="show-prototype">
@@ -34,7 +34,7 @@
            <a th:href="@{プロトタイプ詳細機能}" th:text="${proto.name}"></a>
           </div>
 
-          <div class="card-summary" th:text="${proto.catchcopy}">
+          <div class="card-catchCopy" th:text="${proto.catchcopy}">
           </div>
 
          <div class="card-username">
@@ -47,6 +47,6 @@
 
 <!-- フッター - -->
  
-  <div class="footer" th:insert="~{footer :: footer}" ></div>
+  <div class="footer" th:replace="~{footer :: footer}" ></div>
   
 </body> 
