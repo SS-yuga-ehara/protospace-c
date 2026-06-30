@@ -1,4 +1,4 @@
-package com.example.protospace_c.controller; // 1. パッケージ名を現在のプロジェクトに変更
+package com.example.protospace_c.controller; 
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -36,13 +36,13 @@ public class UserController {
     }
 
     //新規登録処理を行う
-    @PostMapping("/users/sign_up") // SecurityConfigの設定に合わせてURLを統一
+    @PostMapping("/users/sign_up") 
     public String createUser(@ModelAttribute("userForm") @Validated(ValidationOrder.class) UserForm userForm, BindingResult result, Model model) {
         
         userForm.validatePasswordConfirmation(result);
         
         if (userRepository.existsByEmail(userForm.getEmail())) {
-            result.rejectValue("email", null, "このメールアドレスは既に登録されています");
+            result.rejectValue("email", null, "This email address is already registered");
         }
 
         
@@ -77,7 +77,7 @@ public class UserController {
     @GetMapping("/users/login")
     public String showLogin(@RequestParam(required = false) String error, Model model) {
         if (error != null) {
-            model.addAttribute("loginError", "メールアドレスまたはパスワードが間違っています");
+            model.addAttribute("loginError", "Incorrect email or password");
         }
         return "users/login";
     }

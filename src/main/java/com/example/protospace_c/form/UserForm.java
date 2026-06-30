@@ -14,7 +14,7 @@ import lombok.Data;
 public class UserForm {
 
   @NotBlank(message="Email can't be blank",groups=ValidationPriority1.class)
-  @Email(message = "Email can't be blank",groups=ValidationPriority2.class)
+  @Email(message = "Invalid email format",groups=ValidationPriority2.class)
   private String email;
 
   @NotBlank(message="password can't be blank",groups=ValidationPriority1.class)
@@ -38,7 +38,7 @@ public class UserForm {
   //passwordとpasswordConfirmationの値が一致しているか
   public void validatePasswordConfirmation(BindingResult result){
     if(!password.equals(passwordConfirmation)){
-      result.rejectValue("passwordConfirmation",null,"passwordと確認用があっていません");
+      result.rejectValue("passwordConfirmation",null,"Password confirmation does not match");
     }
   }
 }
