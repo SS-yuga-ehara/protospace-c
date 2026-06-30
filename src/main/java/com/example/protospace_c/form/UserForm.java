@@ -8,11 +8,9 @@ import com.example.protospace_c.validation.ValidationPriority2;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
 public class UserForm {
 
   @NotBlank(message="Email can't be blank",groups=ValidationPriority1.class)
