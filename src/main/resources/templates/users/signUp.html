@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <div th:replace="~{header :: header}"></div>
+   <!--*/ <div th:replace="~{header :: header}"></div> */-->
 
     <div class="main">
       <div class="inner">
@@ -19,7 +19,7 @@
             th:action="@{/user}"
             th:method="post"
             th:object="${userForm}"
-            ,
+        
             class="new_user"
           >
             <div class="field">
@@ -48,7 +48,7 @@
 
             <div class="field">
               <label th:for="user_name">ユーザー名</label>
-              <input type="user_name" th:field="*{user_name}" />
+              <input type="user_name" th:field="*{name}" />
             </div>
 
             <div class="field">
@@ -58,7 +58,7 @@
 
             <div class="field">
               <label th:for="membership">所属</label>
-              <input type="membership" th:field="*{membership}" />
+              <input type="membership" th:field="*{affiliation}" />
             </div>
 
             <div class="field">
@@ -74,6 +74,6 @@
       </div>
     </div>
 
-    <div th:replace="~{footer :: footer}"></div>
+   <!--/* <div th:replace="~{footer :: footer}"></div> */-->
   </body>
 </html>
