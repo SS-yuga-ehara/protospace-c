@@ -10,6 +10,10 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/protospace_db
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: password
+      SPRING_DEVTOOLS_RESTART_ENABLED: "true"
+    volumes:
+      - .:/app
+    command: sh -c "./gradlew classes --continuous & ./gradlew bootRun"
     restart: always
 
   db:
