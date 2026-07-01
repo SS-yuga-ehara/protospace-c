@@ -1,0 +1,47 @@
+/* =============================================
+   ProtoSpace - style.css
+   ============================================= */
+ 
+/* ----- Reset & Base ----- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #333333;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+ 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.btn,
+a.btn,
+button.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #333333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+ 
+.btn:hover,
+a.btn:hover,
+button.btn:hover {
+  background-color: #111111;
+}
