@@ -61,19 +61,3 @@ position: relative;
   margin-top: auto;
   text-align: right;
 }
-
-
-/* フッター */
-.footer{
-  height: 30px;
-  width: 100vw;
-  background-color: darkgray;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-
-.footer p{
-  color: #ffffff;
-  font-size: 10px;
-}
