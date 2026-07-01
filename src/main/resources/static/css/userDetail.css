@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+/* メイン画面 */
+.main{
+  height: calc(100vh - 100px - 50px);
+  width: 100vw;
+  background-color: #ffffff;
+  padding: 50px;
+}
+
+.user-detail-title{
+  font: bold;
+  font-size: 20px;
+}
+
+.info-list{
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+
+}
+
+.info-list dt{
+font-weight: bold;
+background-color: aliceblue;
+}
+
+.info-list dd{
+
+}
+
