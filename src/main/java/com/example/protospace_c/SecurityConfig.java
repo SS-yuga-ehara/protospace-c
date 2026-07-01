@@ -1,4 +1,4 @@
-package com.example.protospace_c; // 1. パッケージ名を現在のプロジェクトに合わせる
+package com.example.protospace_c;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

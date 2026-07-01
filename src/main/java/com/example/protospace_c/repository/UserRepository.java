@@ -1,11 +1,11 @@
-package com.example.protospace_c.repository; // パッケージを現在のものに変更
+package com.example.protospace_c.repository; 
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 
-import com.example.protospace_c.entity.UserEntity; // Entityの参照先を変更
+import com.example.protospace_c.entity.UserEntity;
 
 @Mapper
 public interface UserRepository {
