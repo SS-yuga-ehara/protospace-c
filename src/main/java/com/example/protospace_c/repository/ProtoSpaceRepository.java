@@ -14,7 +14,6 @@ public interface ProtoSpaceRepository {
             p.name,
             p.image,
             p.catchcopy,
-            p.concept,
             u.name AS user_name
         FROM prototypes p
         JOIN users u ON p.user_id = u.id
