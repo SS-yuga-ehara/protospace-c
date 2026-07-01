@@ -1,74 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html xmlns:th="http://www.thymeleaf.org" lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
-    <link th:href="@{/css/signUp.css}" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/css/signUp.css}" rel="stylesheet" type="text/css" />
     <title>ProtoSpace</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <div th:replace="~{header :: header}"></div>
 
-<div th:replace="~{header :: header}"></div>
+    <div class="main">
+      <div class="inner">
+        <div class="wrapper">
+          <h2 class="page-head">ユーザー新規登録</h2>
 
-<div class="main">
-  <div class="inner">
-    <div class="wrapper">
-    <h2 class="page-head">ユーザー新規登録</h2>
-    
-      <form th:action="@{/user}" th:method="post" th:object="${userForm}", class="new_user">
-
-        <div class="field">
-          <label th:for="email">メールアドレス</label>
-          <input type="email" th:field="*{email}"  />
-          </div>
-
-          <div class="field">
-            <label th:for="password">パスワード(6文字以上)</label>
-            <input type="password" th:field="*{password}" />
-          </div>
-
-          <div class="field">
-            <div class="field-label">
-              <label th:for="password_confirmation">パスワード再入力</label>
+          <form
+            th:action="@{/user}"
+            th:method="post"
+            th:object="${userForm}"
+            ,
+            class="new_user"
+          >
+            <div class="field">
+              <label th:for="email">メールアドレス</label>
+              <input type="email" th:field="*{email}" />
             </div>
 
-            <div class="field-input">
-              <input type="password" th:field="*{passwordConfirmation}"  autocomplete="off"/>
+            <div class="field">
+              <label th:for="password">パスワード(6文字以上)</label>
+              <input type="password" th:field="*{password}" />
             </div>
-          </div>
 
-          <div class="field">
-            <label th:for="user_name">ユーザー名</label>
-            <input type="user_name"  th:field="*{user_name}"  />
-          </div>
+            <div class="field">
+              <div class="field-label">
+                <label th:for="password_confirmation">パスワード再入力</label>
+              </div>
 
-          <div class="field">
-            <label th:for="profile">プロフィール</label>
-            <input type="profile"  th:field="*{profile}"  />
-          </div>
+              <div class="field-input">
+                <input
+                  type="password"
+                  th:field="*{passwordConfirmation}"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
 
-          <div class="field">
-            <label th:for="membership">所属</label>
-            <input type="membership"  th:field="*{membership}"  />
-          </div>
+            <div class="field">
+              <label th:for="user_name">ユーザー名</label>
+              <input type="user_name" th:field="*{user_name}" />
+            </div>
 
-          <div class="field">
-            <label th:for="position">役職</label>
-            <input type="position"  th:field="*{position}"  />
-          </div>
+            <div class="field">
+              <label th:for="profile">プロフィール</label>
+              <input type="profile" th:field="*{profile}" />
+            </div>
 
-          <div class="actions">
-            <input type="submit" value="新規登録">
-          </div>
+            <div class="field">
+              <label th:for="membership">所属</label>
+              <input type="membership" th:field="*{membership}" />
+            </div>
 
-        </form>
+            <div class="field">
+              <label th:for="position">役職</label>
+              <input type="position" th:field="*{position}" />
+            </div>
+
+            <div class="actions">
+              <input type="submit" value="新規登録" />
+            </div>
+          </form>
+        </div>
       </div>
-  </div>
-</div>
-</div>
+    </div>
 
-<div th:insert="~{footer :: footer}"></div>
-
-</body>
+    <div th:replace="~{footer :: footer}"></div>
+  </body>
 </html>
