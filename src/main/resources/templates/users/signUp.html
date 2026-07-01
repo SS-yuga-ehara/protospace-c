@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/signUp.css}" rel="stylesheet" type="text/css">
     <title>ProtoSpace</title>
 </head>
 
 <body>
 
-<div th:insert="~{header :: header}"></div>
+<div th:replace="~{header :: header}"></div>
 
 <div class="main">
   <div class="inner">
@@ -18,43 +19,43 @@
       <form th:action="@{/user}" th:method="post" th:object="${userForm}", class="new_user">
 
         <div class="field">
-          <label for="email">メールアドレス</label>
-          <input type="email" id="email" th:field="*{email}"  />
+          <label th:for="email">メールアドレス</label>
+          <input type="email" th:field="*{email}"  />
           </div>
 
           <div class="field">
-            <label for="password">パスワード(6文字以上)</label>
-            <input type="password" id="password" th:field="*{password}" />
+            <label th:for="password">パスワード(6文字以上)</label>
+            <input type="password" th:field="*{password}" />
           </div>
 
           <div class="field">
             <div class="field-label">
-              <label for="password_confirmation">パスワード再入力</label>
+              <label th:for="password_confirmation">パスワード再入力</label>
             </div>
 
             <div class="field-input">
-              <input type="password" th:field="*{passwordConfirmation}" id="password_confirmation" autocomplete="off"/>
+              <input type="password" th:field="*{passwordConfirmation}"  autocomplete="off"/>
             </div>
           </div>
 
           <div class="field">
-          <label for="user_name">ユーザー名</label>
-          <input type="user_name" id="user_name" th:field="*{user_name}"  />
+            <label th:for="user_name">ユーザー名</label>
+            <input type="user_name"  th:field="*{user_name}"  />
           </div>
 
           <div class="field">
-          <label for="profile">プロフィール</label>
-          <input type="profile" id="profile" th:field="*{profile}"  />
+            <label th:for="profile">プロフィール</label>
+            <input type="profile"  th:field="*{profile}"  />
           </div>
 
           <div class="field">
-          <label for="membership">所属</label>
-          <input type="membership" id="membership" th:field="*{membership}"  />
+            <label th:for="membership">所属</label>
+            <input type="membership"  th:field="*{membership}"  />
           </div>
 
           <div class="field">
-          <label for="position">役職</label>
-          <input type="position" id="position" th:field="*{position}"  />
+            <label th:for="position">役職</label>
+            <input type="position"  th:field="*{position}"  />
           </div>
 
           <div class="actions">

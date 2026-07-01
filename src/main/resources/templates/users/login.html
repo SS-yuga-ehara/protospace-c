@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/login.css}" rel="stylesheet" type="text/css">
     <title>ProtoSpace</title>
 </head>
 <body>
 
-<div th:insert="~{header :: header}"></div>
+<div th:replace="~{header :: header}"></div>
 
 <div class="main">
   <div class="inner">
     <div class="wrapper">
     <h2 class="page-head">ユーザーログイン</h2>
-   <p th:if="${loginError}" class="login-error" th:text="${loginError}"></p>
 
     <form th:method="post" th:action="@{/login}" class="new_user">
 
       <div class="field">
-        <label class="column-title">メールアドレス</label>
-        <input type="text" id="email" name="email" autofocus="autofocus" required="required" />
+        <label class="column-title">メールアドレス</label><br />
+        <input type="text"  name="email" autofocus="autofocus" required="required" />
       </div>
 
       <div class="field">
-        <label class="password">パスワード（6文字以上）</label>
+        <label class="password">パスワード（6文字以上）</label><br />
         <input type="password" name="password" required="required" autocomplete="off" />
       </div>
 
