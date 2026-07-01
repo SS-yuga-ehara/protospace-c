@@ -3,49 +3,49 @@
   <meta charset="UTF-8">
   <title>Proto Space</title>
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-   <link rel="stylesheet" th:href="@{/css/userDetail.css}">
-   <link rel="stylesheet" th:href="@{/css/layout.css}">
+   <link rel="stylesheet" href="../static/css/userDetail.css">
+   <link rel="stylesheet" href="../static/css/layout.css">
 </head>
 
 <body>
   <!-- ヘッダー -->
-  <header class="header" th:insert="~{header :: header}"></header>
+  <header class="header">別記</header>
 
   <!-- ユーザー情報表示 -->
  <div class="main">
-  <div class="user-detail-title" th:text="${**.user.name} + 'さんの情報'"></div>
+  <div class="user-detail-title">名前さんの情報</div>
 
   <dl div class="info-list">
       <dt>名前</dt>
-      <dd th:text="${**.user.name}"></dd>
+      <dd>あきら</dd>
       <dt>プロフィール</dt>
-      <dd th:text="${**.user.profile}"></dd>
+      <dd>仮置き</dd>
       <dt>所属</dt>
-      <dd th:text="${**.user.affiliation}"></dd>
+      <dd>無所属</dd>
       <dt>役職</dt>
-      <dd th:text="${**.user.position}"></dd>
+      <dd>開発</dd>
   </dl>
 
 
   <!-- プロトタイプ表示 -->
 
    <div class="show-prototype">
-      <div th:each="proto : ${prototypes}" class="prototype">
+      <div class="prototype">
 
-        <div class="card-img" th:if="${proto.image}">
-         <img th:src="${proto.image}" alt="画像の説明">
+        <div class="card-img">
+         <img src="c:\Users\akira.shigemitsu\Downloads\スクリーンショット_1-7-2026_16851_www.bing.com.jpeg" alt="画像の説明">
         </div>
 
          <div class="card-body">
           <div class="card-name">
-           <a th:href="@{プロトタイプ詳細機能}" th:text="${proto.name}"></a>
+           <a href="@{プロトタイプ詳細機能}" >プロトタイプ名</a>
           </div>
 
-          <div class="card-catchCopy" th:text="${proto.catchcopy}">
+          <div class="card-catchCopy" >キャッチコピー
           </div>
 
          <div class="card-username">
-           <a th:href="@{ユーザー詳細画面}" th:text="'by ' + ${proto.user.name}"></a>
+           <a href="@{ユーザー詳細画面}">byあきら</a>
          </div>
         </div>
       </div>
@@ -54,6 +54,7 @@
 
 
     <!-- フッター -->
-  <div class="footer" th:insert="~{footer :: footer}" ></div>
+  <div class="footer" >別記</div>
   
 </body>
+</html>
