@@ -29,7 +29,7 @@ body {
 .info-list{
   display: grid;
   grid-template-columns: 120px 280px;
-  border: 1px solid #ddd;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
   overflow: hidden;
   width: 400px; 
@@ -39,13 +39,13 @@ body {
 font-weight: bold;
 background-color: #f9f9f9;
 padding: 20px 12px;
-border-bottom: 1px solid #eee;
+border-bottom: 1px solid #e5e7eb;
 margin: 0;
 }
 
 .info-list dd{
   padding: 20px 12px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #e5e7eb;
   margin: 0;
 }
 
