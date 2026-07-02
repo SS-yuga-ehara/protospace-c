@@ -1,0 +1,27 @@
+<header xmlns:th="http://www.thymeleaf.org" th:fragment="header" class="header">
+  <div class="header__bar">
+ 
+   <div class="header-left">
+    <p class="sub-title">SHARE THE PROTOTYPE</p>
+ 
+    <h1 class="title"> PROTO SPACE </h1>
+  </div>
+ 
+    <div class="header-right">
+      <div th:if="${#authorization.expression('isAuthenticated()')}">
+        <form th:action="@{/logout}" method="post" value="ログアウト" class="btn">
+          <button>ログアウト</button>
+        </form>
+      </div>
+
+        <a th:href="@{/tweets/new}" class="New-Proto">New Proto</a>
+      </div> 
+
+      <div th:if="${#authorization.expression('!isAuthenticated()')}">
+        <a th:href="@{/users/login}" class="login-link">ログイン</a>
+ 
+        <a th:href="@{/users/sign_up}" class="signup-link">新規登録</a>
+      </div>
+    </div>
+   </div>
+</header>
