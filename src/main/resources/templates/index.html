@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Proto Space</title>
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+   <link rel="stylesheet" th:href="@{/css/index.css}">
+   <link rel="stylesheet" th:href="@{/css/layout.css}">
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="header" th:replace="~{header :: header}"></header>
+
+
+  <!--  プロトタイプ表示 -->
+   <div class="main">
+
+    <div th:if="${#authorization.expression('isAuthenticated()')}">
+    <div class="greeting">こんにちは、<a th:href="@{ユーザー詳細画面}" th:text="${#authentication.name} + 'さん'"></a></div>
+    </div>
+    
+        <div class="show-prototype">
+      <div th:each="proto : ${prototypes}" class="prototype">
+
+      <!--  画像表示  -->
+
+        <div class="card-img" th:if="${proto.image}">
+         <img th:src="${proto.image}" alt="画像の説明">
+        </div>
+   
+     <!--  プロトタイプ概要  -->
+        <div class="card-body">
+          <div class="card-name">
+           <a th:href="@{プロトタイプ詳細機能}" th:text="${proto.name}"></a>
+          </div>
+
+          <div class="card-catchCopy" th:text="${proto.catchcopy}">
+          </div>
+
+         <div class="card-username">
+           <a th:href="@{ユーザー詳細画面}" th:text="'by ' + ${proto.user.name}"></a>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- フッター - -->
+ 
+  <div class="footer" th:replace="~{footer :: footer}" ></div>
+  
+</body> 
